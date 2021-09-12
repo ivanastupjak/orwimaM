@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LifeTracker">
+
+    <TextView
+        android:id="@+id/player1Life"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="150dp">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/tPlayerOneScore"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/gainLife2"
+        app:layout_constraintEnd_toStartOf="@+id/bDeclareWinner"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bGainLife1"
+        app:layout_constraintVertical_bias="0.514"
+        android:textAlignment="center"
+        android:textSize="40dp"></TextView>
+
+    <TextView
+        android:id="@+id/tPlayerTwoScore"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/loseLife2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toEndOf="@+id/bDeclareWinner"
+        app:layout_constraintTop_toBottomOf="@+id/loseLife1"
+        app:layout_constraintVertical_bias="0.514"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="40dp"></TextView>
+
+    <TextView
+        android:id="@+id/tPlayerOneName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/player1Life"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:textSize="30dp"></TextView>
+
+    <TextView
+        android:id="@+id/tPlayerTwoName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2Life"
+        android:textAlignment="center"
+        android:textSize="30dp"></TextView>
+
+    <Button
+        android:id="@+id/bDeclareWinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bDeclareWinner"
+        app:layout_constraintBottom_toTopOf="@+id/player2Life"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1Life"
+        app:layout_constraintVertical_bias="0.494"></Button>
+
+    <TextView
+        android:id="@+id/player2Life"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="150dp">
+
+    </TextView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bGainLife1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/player1Life"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231"
+        app:srcCompat="@drawable/ic_add"
+        android:backgroundTint="@color/white"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/loseLife1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player1Life"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231"
+        app:srcCompat="@drawable/ic_remove"
+        android:backgroundTint="@color/white"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/gainLife2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/player2Life"
+        app:layout_constraintHorizontal_bias="0.632"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bGainLife1"
+        app:layout_constraintVertical_bias="0.641"
+        app:srcCompat="@drawable/ic_add"
+        android:backgroundTint="@color/white"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/loseLife2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="164dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toEndOf="@+id/player2Life"
+        app:layout_constraintTop_toBottomOf="@+id/loseLife1"
+        app:layout_constraintVertical_bias="0.993"
+        app:srcCompat="@drawable/ic_remove"
+        android:backgroundTint="@color/white"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
